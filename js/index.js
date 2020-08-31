@@ -37,6 +37,45 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//Header//
+const navBar = document.querySelector('nav');
+
+const navLink1 = navBar.querySelector('a:nth-of-type(1)');
+navLink1.textContent = siteContent.nav["nav-item-1"]
+
+const navLink2 = navBar.querySelector('a:nth-of-type(2)');
+navLink2.textContent = siteContent.nav["nav-item-2"]
+
+const navLink3 = navBar.querySelector('a:nth-of-type(3)');
+navLink3.textContent = siteContent.nav["nav-item-3"]
+
+const navLink4 = navBar.querySelector('a:nth-of-type(4)');
+navLink4.textContent = siteContent.nav["nav-item-4"]
+
+const navLink5 = navBar.querySelector('a:nth-of-type(5)');
+navLink5.textContent = siteContent.nav["nav-item-5"]
+
+const navLink6 = navBar.querySelector('a:nth-of-type(6)');
+navLink6.textContent = siteContent.nav["nav-item-6"]
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//CTA Section//
+const domHeader = document.querySelector('.cta .cta-text h1');
+domHeader.textContent = siteContent.cta.h1
+
+const getStartedButton = document.querySelector('button');
+getStartedButton.textContent = siteContent.cta.button
+
+const headerImg = document.querySelector("#cta-img");
+headerImg.src = siteContent.cta["img-src"]
+
+//Main Content Section//
+const featuresH4 = document.querySelector('.main-content .top-content .text-content h4');
+featuresH4.textContent = siteContent["main-content"]["features-h4"];
+
+const featuresP = document.querySelector('.main-content .top-content .text-content p');
+featuresP.textContent = siteContent["main-content"]["features-content"]
+
+
