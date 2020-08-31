@@ -38,14 +38,38 @@ const siteContent = {
 };
 
 //Header//
-const navLinks = document.querySelectorAll('nav a');
-const navArr = Array.from(navLinks);
-navArr[0].textContent = siteContent.nav["nav-item-1"]
-navArr[1].textContent = siteContent.nav["nav-item-2"]
-navArr[2].textContent = siteContent.nav["nav-item-3"]
-navArr[3].textContent = siteContent.nav["nav-item-4"]
-navArr[4].textContent = siteContent.nav["nav-item-5"]
-navArr[5].textContent = siteContent.nav["nav-item-6"]
+const nav = document.querySelector('nav');
+
+const nav1 = nav.querySelector('a:nth-of-type(1)');
+nav1.textContent = siteContent.nav["nav-item-1"]
+
+const nav2 = nav.querySelector('a:nth-of-type(2)');
+nav2.textContent = siteContent.nav["nav-item-2"]
+
+const nav3 = nav.querySelector('a:nth-of-type(3)');
+nav3.textContent = siteContent.nav["nav-item-3"]
+
+const nav4 = nav.querySelector('a:nth-of-type(4)');
+nav4.textContent = siteContent.nav["nav-item-4"]
+
+const nav5 = nav.querySelector('a:nth-of-type(5)');
+nav5.textContent = siteContent.nav["nav-item-5"]
+
+const nav6 = nav.querySelector('a:nth-of-type(6)');
+nav6.textContent = siteContent.nav["nav-item-6"]
+
+const people = document.createElement('a');
+people.textContent = 'People';
+people.href = '#';
+nav.appendChild(people);
+
+const share = document.createElement('a');
+share.textContent = 'Share';
+share.href = '#';
+nav.prepend(share);
+
+const navLinks = nav.querySelectorAll('a');
+navLinks.forEach(element => element.style.color = 'green');
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
