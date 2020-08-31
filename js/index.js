@@ -71,11 +71,41 @@ getStartedButton.textContent = siteContent.cta.button
 const headerImg = document.querySelector("#cta-img");
 headerImg.src = siteContent.cta["img-src"]
 
-//Main Content Section//
-const featuresH4 = document.querySelector('.main-content .top-content .text-content h4');
+//Main Content Top//
+const featuresH4 = document.querySelector('.main-content .top-content .text-content:nth-of-type(1) h4');
 featuresH4.textContent = siteContent["main-content"]["features-h4"];
 
-const featuresP = document.querySelector('.main-content .top-content .text-content p');
-featuresP.textContent = siteContent["main-content"]["features-content"]
+const featuresP = document.querySelector('.main-content .top-content .text-content:nth-of-type(1) p');
+featuresP.textContent = siteContent["main-content"]["features-content"];
 
+
+const aboutH4 = document.querySelector('.main-content .top-content .text-content:nth-of-type(2) h4');
+aboutH4.textContent = siteContent["main-content"]["about-h4"]
+
+const aboutP = document.querySelector('.main-content .top-content .text-content:nth-of-type(2) p');
+aboutP.textContent = siteContent["main-content"]["about-content"]
+
+//Main Content Img//
+const middleImg = document.querySelector("#middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"]
+
+
+//Main Content Bottom//
+const servicesH4 = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(1) h4');
+servicesH4.textContent = siteContent["main-content"]["services-h4"];
+
+const servicesP = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(1) p');
+servicesP.textContent = siteContent["main-content"]["services-content"];
+
+const productH4 = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(2) h4');
+productH4.textContent = siteContent["main-content"]["product-h4"];
+
+const productP = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(2) p');
+productP.textContent = siteContent["main-content"]["product-content"];
+
+const visionH4 = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(3) h4');
+visionH4.textContent = siteContent["main-content"]["vision-h4"];
+
+const visionP = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(3) p');
+visionP.textContent = siteContent["main-content"]["vision-content"];
 
