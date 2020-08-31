@@ -75,8 +75,10 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //CTA Section//
+siteContent.cta.h1 = 'DOM <br> Is<br> Awesome';
+
 const domHeader = document.querySelector('.cta .cta-text h1');
-domHeader.textContent = siteContent.cta.h1
+domHeader.innerHTML = siteContent['cta']['h1'];
 
 const getStartedButton = document.querySelector('button');
 getStartedButton.textContent = siteContent.cta.button
@@ -125,13 +127,15 @@ visionP.textContent = siteContent["main-content"]["vision-content"];
 //Contact Section//
 const contactHeader = document.querySelector('.contact h4');
 
-contactHeader.textContent = siteContent.contact["contact-h4"]
+contactHeader.textContent = siteContent.contact["contact-h4"];
+
+siteContent.contact.address = '123 Way 456 Street<br> Somewhere, USA';
 
 const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
 
-contactAddress.textContent = siteContent.contact.address;
+contactAddress.innerHTML = siteContent.contact.address;
 
-const contactPhone = document.querySelector('.contact p:nth-of-type(2)')
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
 
 contactPhone.textContent = siteContent.contact.phone;
 
