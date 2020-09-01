@@ -75,10 +75,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //CTA Section//
-siteContent.cta.h1 = 'DOM <br> Is<br> Awesome';
-
 const domHeader = document.querySelector('.cta .cta-text h1');
-domHeader.innerHTML = siteContent['cta']['h1'];
+domHeader.innerHTML = siteContent['cta']['h1'].split(' ').join('<br>');
 
 const getStartedButton = document.querySelector('button');
 getStartedButton.textContent = siteContent.cta.button
